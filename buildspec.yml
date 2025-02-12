@@ -1,0 +1,9 @@
+---
+version: 0.2
+phases:
+  install:
+    commands:
+      - yum update -y && yum -y install jq docker
+  build:
+    commands:
+      - docker build -t codepipimg .
